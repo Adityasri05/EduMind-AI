@@ -1,4 +1,12 @@
 {
+  "name": "shikshamitra-ai-root",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run dev --prefix shikshamitra-ai",
+    "build": "npm run build --prefix shikshamitra-ai",
+    "start": "npm run start --prefix shikshamitra-ai",
+    "lint": "npm run lint --prefix shikshamitra-ai"
+  },
   "dependencies": {
     "firebase": "^12.13.0"
   }
