@@ -12,7 +12,7 @@ async def transcribe_audio(
 ):
     """Transcribe a voice recording to text using Whisper or simulation."""
     audio_bytes = await audio_file.read()
-    transcript = VoiceService.transcribe_audio(audio_bytes, language)
+    transcript = VoiceService.transcribe_audio(audio_bytes, language, mime_type=audio_file.content_type or "audio/webm")
 
     return {
         "filename": audio_file.filename,
@@ -58,7 +58,7 @@ async def voice_tutor_session(
     """
     # Step 1: Transcribe
     audio_bytes = await audio_file.read()
-    transcript = VoiceService.transcribe_audio(audio_bytes, "hi")
+    transcript = VoiceService.transcribe_audio(audio_bytes, "hi", mime_type=audio_file.content_type or "audio/webm")
 
     # Step 2: Generate AI answer
     ai_response = TutorAgent.answer_query(transcript, dialect)

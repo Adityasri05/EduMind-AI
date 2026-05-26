@@ -11,13 +11,14 @@ class VoiceService:
     """Handles voice-based tutoring: STT transcription and TTS synthesis."""
 
     @staticmethod
-    def transcribe_audio(audio_bytes: bytes, language: str = "hi") -> str:
+    def transcribe_audio(audio_bytes: bytes, language: str = "hi", mime_type: str = "audio/webm") -> str:
         """
         Transcribe audio bytes to text using Whisper API or simulation.
         
         Args:
             audio_bytes: Raw audio file content
             language: ISO language code (hi for Hindi, en for English)
+            mime_type: Mime type of the audio file (default audio/webm)
         
         Returns:
             Transcribed text string
@@ -34,7 +35,7 @@ class VoiceService:
                     contents=[
                         types.Part.from_bytes(
                             data=audio_bytes,
-                            mime_type="audio/webm"
+                            mime_type=mime_type
                         ),
                         f"You are a Speech-to-Text transcription tool. Transcribe the spoken audio query. If the spoken language is Hindi or Hinglish, transcribe it into neat Devanagari Hindi or Hinglish respectively. The target language code is '{language}'. Return ONLY the transcribed query text, with no preamble, explanations, markdown, or punctuation unless spoken."
                     ]
