@@ -9,10 +9,10 @@ const API_BASE_URL = 'http://localhost:8000/api/v1';
 export const WS_BASE_URL = 'ws://localhost:8000/ws/tutor';
 
 // Simulated database fallback stores
-let mockStudentId = 1;
+const mockStudentId = 1;
 let mockStudentXp = 320;
 let mockStudentStreak = 7;
-let mockStudentLevel = 3;
+const mockStudentLevel = 3;
 
 const mockDialectGreetings = {
   hindi: 'नमस्ते! मैं आपका शिक्षा मित्र एआई हूँ। आज हम क्या पढ़ेंगे?',

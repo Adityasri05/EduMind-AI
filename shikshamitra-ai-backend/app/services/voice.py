@@ -22,6 +22,28 @@ class VoiceService:
         Returns:
             Transcribed text string
         """
+        if settings.GEMINI_API_KEY:
+            try:
+                from google import genai
+                from google.genai import types
+                client = genai.Client(api_key=settings.GEMINI_API_KEY)
+                
+                # Transcribe using Gemini 2.5 Flash Lite
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash-lite",
+                    contents=[
+                        types.Part.from_bytes(
+                            data=audio_bytes,
+                            mime_type="audio/webm"
+                        ),
+                        f"You are a Speech-to-Text transcription tool. Transcribe the spoken audio query. If the spoken language is Hindi or Hinglish, transcribe it into neat Devanagari Hindi or Hinglish respectively. The target language code is '{language}'. Return ONLY the transcribed query text, with no preamble, explanations, markdown, or punctuation unless spoken."
+                    ]
+                )
+                if response.text:
+                    return response.text.strip()
+            except Exception as e:
+                pass  # Fall through to OpenAI / Simulation
+
         if settings.OPENAI_API_KEY:
             try:
                 import openai
