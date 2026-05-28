@@ -1,5 +1,5 @@
 import os
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # App Settings
@@ -16,15 +16,15 @@ class Settings(BaseSettings):
     # Defaults to SQLite out-of-the-box for smooth demo setups. If DATABASE_URL is supplied, it connects to PostgreSQL.
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./shikshamitra.db")
     
-    # AI Credentials (Optional falling back to stubs if not set)
+    # AI Credentials (Gemini powers all AI agents: Tutor, Voice STT, OCR, Quiz)
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
     
     # Vector Database Configuration
     CHROMA_DB_PATH: str = os.getenv("CHROMA_DB_PATH", "./chroma_data")
 
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        case_sensitive=True,
+    )
 
 settings = Settings()

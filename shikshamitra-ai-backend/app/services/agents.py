@@ -67,10 +67,12 @@ class TutorAgent:
             try:
                 prompt = f"You are ShikshaMitra AI, a friendly, encouraging UP Board coach. Reply to this query: '{query}' in a conversational {dialect} dialect. Explain concepts step-by-step."
                 if image_data:
-                    # Multimodal analysis stubs
+                    import PIL.Image
+                    import io
+                    image = PIL.Image.open(io.BytesIO(image_data))
                     response = client.models.generate_content(
                         model=MODEL_ID,
-                        contents=[prompt, image_data]
+                        contents=[prompt, image]
                     )
                 else:
                     response = client.models.generate_content(

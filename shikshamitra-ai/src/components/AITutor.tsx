@@ -16,6 +16,9 @@ export default function AITutor() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const wsRef = useRef<WebSocket | null>(null);
 
+  const addChatMessageRef = useRef(addChatMessage);
+  addChatMessageRef.current = addChatMessage;
+
   // WebSocket real-time agent link with graceful fallback
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -35,7 +38,7 @@ export default function AITutor() {
         try {
           const data = JSON.parse(event.data);
           if (data.type === 'message' || data.type === 'welcome') {
-            addChatMessage({
+            addChatMessageRef.current({
               sender: 'ai',
               text: data.message_text
             });
@@ -67,7 +70,8 @@ export default function AITutor() {
         ws.close();
       }
     };
-  }, [studentId, addChatMessage]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [studentId]);
 
   // Auto-scroll to bottom of chat
   useEffect(() => {

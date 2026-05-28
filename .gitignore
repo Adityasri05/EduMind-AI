@@ -48,3 +48,8 @@
 **/.DS_Store
 **/*.pem
 **/*.tsbuildinfo
+
+# Firebase
+.firebase/
+firebase-debug.log
+

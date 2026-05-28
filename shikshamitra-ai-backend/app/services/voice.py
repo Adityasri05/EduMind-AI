@@ -1,6 +1,6 @@
 """
 Voice processing service for ShikshaMitra AI.
-Handles speech-to-text (Whisper) and text-to-speech pipelines.
+Handles speech-to-text (Gemini) and text-to-speech pipelines.
 Falls back to simulation stubs when API keys are not configured.
 """
 
@@ -13,7 +13,7 @@ class VoiceService:
     @staticmethod
     def transcribe_audio(audio_bytes: bytes, language: str = "hi", mime_type: str = "audio/webm") -> str:
         """
-        Transcribe audio bytes to text using Whisper API or simulation.
+        Transcribe audio bytes to text using Gemini API or simulation.
         
         Args:
             audio_bytes: Raw audio file content
@@ -42,28 +42,7 @@ class VoiceService:
                 )
                 if response.text:
                     return response.text.strip()
-            except Exception as e:
-                pass  # Fall through to OpenAI / Simulation
-
-        if settings.OPENAI_API_KEY:
-            try:
-                import openai
-                client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
-                # Write temp audio for Whisper
-                import tempfile, os
-                with tempfile.NamedTemporaryFile(suffix=".webm", delete=False) as tmp:
-                    tmp.write(audio_bytes)
-                    tmp_path = tmp.name
-
-                with open(tmp_path, "rb") as audio_file:
-                    transcript = client.audio.transcriptions.create(
-                        model="whisper-1",
-                        file=audio_file,
-                        language=language
-                    )
-                os.unlink(tmp_path)
-                return transcript.text
-            except Exception as e:
+            except Exception:
                 pass  # Fall through to simulation
 
         # Simulation fallback for demo/hackathon mode

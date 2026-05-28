@@ -86,7 +86,8 @@ export const api = {
         streak: mockStudentStreak,
         level: mockStudentLevel,
         study_hours: 14.5,
-        offline_mode: false
+        offline_mode: false,
+        created_at: new Date().toISOString()
       };
     }
   },
