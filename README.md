@@ -1,5 +1,5 @@
 # 🚀 EduMind AI
-### Developed by Team **TechOrbiters**
+### Developed by Team **TechOrbiter**
 
 **EduMind AI** is the world's first AI-native adaptive learning intelligence platform. Inspired by modern learning science and cognitive psychology, EduMind AI acts as a personal learning companion that understands what a learner knows, identifies gaps, builds retention via spaced repetition, and guides students towards their academic goals.
 
