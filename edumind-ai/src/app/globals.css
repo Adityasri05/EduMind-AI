@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712;
+  --foreground: #f8fafc;
+  
+  --card: #090d16;
+  --card-foreground: #f8fafc;
+  
+  --primary: #8b5cf6; /* Electric Purple */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #06b6d4; /* Neon Cyan */
+  --secondary-foreground: #ffffff;
+  
+  --accent: #10b981; /* Emerald Green */
+  --accent-foreground: #ffffff;
+  
+  --muted: #111827;
+  --muted-foreground: #9ca3af;
+  
+  --border: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  
+  --font-sans: 'Outfit', 'Inter', var(--font-geist-sans), Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Wave Keyframes */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-1 { animation: wave 1.2s ease-in-out infinite; }
+.animate-wave-2 { animation: wave 0.9s ease-in-out infinite; }
+.animate-wave-3 { animation: wave 1.5s ease-in-out infinite; }
+.animate-wave-4 { animation: wave 1.1s ease-in-out infinite; }
+.animate-wave-5 { animation: wave 1.3s ease-in-out infinite; }
+
+/* Grid Background */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Dyslexia Friendly Overrides */
+.font-dyslexia, .font-dyslexia * {
+  font-family: 'Comic Sans MS', 'DyslexicSans', 'Arial', sans-serif !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.15em !important;
+  line-height: 1.7 !important;
+}
+
+/* High Contrast Mode Overrides */
+.theme-high-contrast {
+  --background: #000000 !important;
+  --foreground: #ffffff !important;
+  --card: #000000 !important;
+  --border: #ffffff !important;
+  --muted: #000000 !important;
+}
+.theme-high-contrast *, .theme-high-contrast button, .theme-high-contrast div {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+.theme-high-contrast button:hover, .theme-high-contrast button:active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+.theme-high-contrast button:hover * {
+  color: #000000 !important;
+}

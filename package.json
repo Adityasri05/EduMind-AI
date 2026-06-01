@@ -1,11 +1,11 @@
 {
-  "name": "shikshamitra-ai-root",
+  "name": "edumind-ai-root",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently -k -n \"frontend,backend\" -c \"cyan,green\" \"npm run dev --prefix shikshamitra-ai\" \"cd shikshamitra-ai-backend && .\\venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --port 8000 --host 127.0.0.1\"",
-    "build": "npm install --prefix shikshamitra-ai && npm run build --prefix shikshamitra-ai",
-    "start": "npm run start --prefix shikshamitra-ai",
-    "lint": "npm run lint --prefix shikshamitra-ai",
+    "dev": "concurrently -k -n \"frontend,backend\" -c \"cyan,green\" \"npm run dev --prefix edumind-ai\" \"cd edumind-ai-backend && .\\venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --port 8000 --host 127.0.0.1\"",
+    "build": "npm install --prefix edumind-ai && npm run build --prefix edumind-ai",
+    "start": "npm run start --prefix edumind-ai",
+    "lint": "npm run lint --prefix edumind-ai",
     "deploy": "npm run build && firebase deploy"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "shikshamitra-ai/out",
+    "public": "edumind-ai/out",
     "ignore": [
       "firebase.json",
       "**/.*",

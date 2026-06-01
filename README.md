@@ -1,21 +1,18 @@
-# 🚀 ShikshaMitra AI
+# 🚀 EduMind AI
 ### Developed by Team **TechOrbiters**
 
-**ShikshaMitra AI** is India's first AI-powered vernacular coaching and learning ecosystem tailored specifically for UP Board students. Operating in native languages and regional dialects (Hindi, Hinglish, Awadhi, Bhojpuri), ShikshaMitra AI removes the language barrier in quality education, detects individual learning gaps, and generates adaptive study paths.
+**EduMind AI** is the world's first AI-native adaptive learning intelligence platform. Inspired by modern learning science and cognitive psychology, EduMind AI acts as a personal learning companion that understands what a learner knows, identifies gaps, builds retention via spaced repetition, and guides students towards their academic goals.
 
 ---
 
-## Problem Statement:
-— Vernacular AI tutor for UP Board students Lakhs of UP Board students prepare in Hindi/Awadhi with little access to quality coaching. Build an agentic tutor that identifies learning gaps, generates practice questions from past papers, and adapts to each student's dialect and pace. Lucknow context: UP Board · Hazratganj coaching belt.
-
 ## 💡 Project Idea & Features
-Students studying in UP Board schools often face a lack of premium-quality resources in their local dialects. ShikshaMitra AI bridges this gap through a multi-agent system and conversational voice tutor.
+EduMind AI provides a high-fidelity learning experience powered by a premium multi-agent tutoring system, dynamic spaced recall systems, and beautiful dashboards.
 
-* **🎙️ Voice Tutor**: A voice-based interactive learning module that listens to student queries and explains complex topics in local dialects.
-* **🤖 Multi-Agent Orchestration**: Powered by 6 specialized backend agents (Tutor, Diagnostic, Quiz Gen, Exam Strategy, Motivation, and Translation).
-* **📝 Adaptive Diagnostic Quizzes**: Dynamically generated quizzes that detect learning gaps (e.g., identifies weak subtopics in Mathematics) and adjust difficulty.
-* **🔍 PYQ Intelligence (RAG)**: Search and retrieve context from Previous Years' Questions (PYQs) using a Vector database (ChromaDB) to recommend targeted practice questions.
-* **📊 Multi-Role Portals**: Custom dashboards for **Students** (learning & streaks), **Teachers** (student metrics & quiz reports), and **Parents** (weekly summary, motivation, and alerts).
+* **🎙️ Voice Tutor**: A voice-based interactive learning module that listens to student queries and explains complex topics.
+* **🤖 Multi-Agent Orchestration**: Powered by specialized backend agents (TutorAgent, SpacedRepetitionEngine, ExamReadinessEngine, DiagnosticAgent).
+* **📝 Adaptive Diagnostic Quizzes**: Dynamically generated quizzes that detect learning gaps and adjust difficulty.
+* **🔍 RAG Concept Mapping**: Search and retrieve context to construct prerequisite knowledge maps.
+* **📊 Multi-Role Portals**: Custom dashboards for **Students** (learning & streaks), **Teachers** (student metrics & reports), and **Parents** (weekly summary, alerts).
 
 ---
 
@@ -44,7 +41,7 @@ Students studying in UP Board schools often face a lack of premium-quality resou
 ## 📂 Project Structure
 ```text
 Agentic Premier League/
-├── shikshamitra-ai/          # Frontend Next.js Project
+├── edumind-ai/          # Frontend Next.js Project
 │   ├── src/
 │   │   ├── app/              # Next.js App Router (Layout & Pages)
 │   │   ├── components/       # UI Dashboards & Modules (AITutor, AdaptiveQuiz, etc.)
@@ -52,7 +49,7 @@ Agentic Premier League/
 │   │   └── utils/            # Axios API wrappers
 │   └── package.json
 │
-├── shikshamitra-ai-backend/  # Backend Python FastAPI Project
+├── edumind-ai-backend/  # Backend Python FastAPI Project
 │   ├── app/
 │   │   ├── models/           # DB Schema definitions & models
 │   │   ├── routers/          # API endpoints (auth, quiz, analytics, voice, planner)
@@ -71,7 +68,7 @@ Agentic Premier League/
 ### 1. Backend Setup
 1. Navigate to the backend folder:
    ```bash
-   cd shikshamitra-ai-backend
+   cd edumind-ai-backend
    ```
 2. Create and activate a Python virtual environment:
    ```bash
@@ -94,7 +91,7 @@ Agentic Premier League/
 ### 2. Frontend Setup
 1. Navigate to the frontend folder:
    ```bash
-   cd ../shikshamitra-ai
+   cd ../edumind-ai
    ```
 2. Install npm packages:
    ```bash
