@@ -34,8 +34,9 @@ EduMind AI provides a high-fidelity learning experience powered by a premium mul
 * **Authentication**: JWT tokens (via `python-jose` and `passlib[bcrypt]`)
 
 ### Containerization & Deployment
-* **Docker**: Configured Dockerfiles for isolated deployment
+* **Docker**: Configured Dockerfiles for isolated deployment.
 
+  
 ---
 
 ## 📂 Project Structure
