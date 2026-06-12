@@ -14,6 +14,7 @@ EduMind AI provides a high-fidelity learning experience powered by a premium mul
 * **🔍 RAG Concept Mapping**: Search and retrieve context to construct prerequisite knowledge maps.
 * **📊 Multi-Role Portals**: Custom dashboards for **Students** (learning & streaks), **Teachers** (student metrics & reports), and **Parents** (weekly summary, alerts).
 
+
 ---
 
 ## 🛠️ Planned Tech Stack
@@ -25,6 +26,7 @@ EduMind AI provides a high-fidelity learning experience powered by a premium mul
 * **Data Visualization**: Recharts (for Student performance tracking, Teacher dashboards, and Parent analytics)
 * **User Feedback**: Canvas-Confetti (gamified celebration system)
 
+
 ### Backend (FastAPI Application)
 * **Core Framework**: FastAPI (high-performance ASGI Python framework)
 * **Real-time Communication**: WebSockets (low-latency duplex voice/text tutoring)
@@ -35,6 +37,8 @@ EduMind AI provides a high-fidelity learning experience powered by a premium mul
 
 ### Containerization & Deployment
 * **Docker**: Configured Dockerfiles for isolated deployment.
+
+
 
   
 ---
