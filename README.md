@@ -8,6 +8,8 @@
 ## 💡 Project Idea & Features
 EduMind AI provides a high-fidelity learning experience powered by a premium multi-agent tutoring system, dynamic spaced recall systems, and beautiful dashboards.
 
+
+
 * **🎙️ Voice Tutor**: A voice-based interactive learning module that listens to student queries and explains complex topics.
 * **🤖 Multi-Agent Orchestration**: Powered by specialized backend agents (TutorAgent, SpacedRepetitionEngine, ExamReadinessEngine, DiagnosticAgent).
 * **📝 Adaptive Diagnostic Quizzes**: Dynamically generated quizzes that detect learning gaps and adjust difficulty.
