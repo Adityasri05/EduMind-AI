@@ -45,6 +45,8 @@ EduMind AI provides a high-fidelity learning experience powered by a premium mul
   
 ---
 
+
+
 ## 📂 Project Structure
 ```text
 Agentic Premier League/
@@ -71,6 +73,8 @@ Agentic Premier League/
 ---
 
 ## 🚀 Running the Project Locally
+
+
 
 ### 1. Backend Setup
 1. Navigate to the backend folder:
